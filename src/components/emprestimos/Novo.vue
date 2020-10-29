@@ -142,6 +142,7 @@ export default {
       const params = {
         size: this.livros.perPage,
         page: page - 1,
+        disponivel: true,
       }
       LivroService.buscarLivros(params)
         .then(response => {
@@ -155,6 +156,7 @@ export default {
       const params = {
         size: this.clientes.perPage,
         page: page - 1,
+        disponivel: true,
       }
       ClienteService.buscarClientes(params)
         .then(response => {
