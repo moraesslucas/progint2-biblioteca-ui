@@ -10,7 +10,8 @@
     "test:unit": "vue-cli-service test:unit",
     "lint": "vue-cli-service lint",
     "inspect": "vue-cli-service inspect > inspect.js",
-    "lint:style": "stylelint --fix src/**/*.{vue,htm,html,css,sss,less,scss}"
+    "lint:style": "stylelint --fix src/**/*.{vue,htm,html,css,sss,less,scss}",
+    "start": "node server.js"
   },
   "dependencies": {
     "@types/jest": "^24.0.11",

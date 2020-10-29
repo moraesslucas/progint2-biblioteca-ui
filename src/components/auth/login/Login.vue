@@ -1,5 +1,8 @@
 <template>
   <form @submit.prevent="onsubmit">
+    <va-notification color="danger" v-if="message" :key="error">
+      {{message}}
+    </va-notification>
     <va-input
       v-model="matricula"
       label="Matrícula"
@@ -80,7 +83,10 @@ export default {
             error.message ||
             error.toString()
         },
-      ).catch(e => { console.log(e) })
+      ).catch(e => { 
+        this.loading = false
+        this.message = "Erro no login, valide as credenciais"
+       })
     },
   },
 }
