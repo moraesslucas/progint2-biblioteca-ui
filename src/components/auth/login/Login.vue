@@ -3,6 +3,7 @@
     <va-notification color="danger" v-if="message" :key="error">
       {{message}}
     </va-notification>
+    <br/>
     <va-input
       v-model="matricula"
       label="Matrícula"
@@ -78,15 +79,9 @@ export default {
         },
         error => {
           this.loading = false
-          this.message =
-            (error.response && error.response.data) ||
-            error.message ||
-            error.toString()
+          this.message = "Erro no login, valide as credenciais e tente novamente."
         },
-      ).catch(e => { 
-        this.loading = false
-        this.message = "Erro no login, valide as credenciais"
-       })
+      )
     },
   },
 }
